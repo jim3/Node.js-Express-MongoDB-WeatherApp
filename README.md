@@ -1,6 +1,8 @@
 ### A Weather Application using Node.js, Express, EJS and MongoDB Atlas
 
-Uses an HTML form in order to get the users zip code and displays their current weather stats.
+Uses an HTML form in order to get the users zip code to displays their current weather stats.
 
-Uses MongoDB Atlas to extract the weather results nad writes them to a MongoDB database and prints the 
-given cites search for.
+MongoDB Atlas is used to extract the resulting weather data (variables) and writes writes the resulting weather data to a MongoDB database. 
+It also queries the MongoDB and prints the list of cites search for and prints that via Express `/weather` route.
+
+
