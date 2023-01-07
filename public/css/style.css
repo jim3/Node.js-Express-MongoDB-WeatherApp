@@ -1,0 +1,43 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: #ff0000; */
+    /* color: #fff000; */
+    background-color: #121212;
+    color: #ffffff;
+    /* font-family: Iosevka, monospace; */
+    font-family: Cascadia Code, monospace;
+    font-size: 14px;
+}
+
+table {
+    font-family: Iosevka, monospace;
+    border-collapse: collapse;
+    width: 100%;
+}
+td {
+    border: 1px solid #dddddd;
+    background-color: #343434;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+a {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+}

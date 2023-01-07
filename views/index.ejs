@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Open Weather</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    </head>
+    <body>
+        <nav>
+            <ul class="nav-container">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <h1 style="text-align: center">Weather</h1>
+
+        <form action="/zip" method="POST">
+            <label for="zip">Enter zip code:</label><br />
+            <input type="text" id="zip" name="zip" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <table>
+            <tr>
+                <th>Current Conditions</th>
+                <th>Temp</th>
+                <th>Feels Like</th>
+                <th>Humidity</th>
+                <th>Pressure</th>
+                <th>Wind Speed</th>
+                <th>Wind Degree</th>
+                <th>Clouds</th>
+                <th>Sunrise</th>
+                <th>Sunset</th>
+                <th>Timezone</th>
+                <th>Location</th>
+            </tr>
+
+            <tr>
+                <% if (typeof weather !== "undefined") { %> <% for (let i = 0; i < 1; i++)
+                { %>
+                <td><%= weather[0].main %></td>
+                <td><%= main.temp %></td>
+                <td><%= main.feels_like %></td>
+                <td><%= main.humidity %></td>
+                <td><%= main.pressure %></td>
+                <td><%= wind.speed %></td>
+                <td><%= wind.deg %></td>
+                <td><%= clouds.all %></td>
+                <td><%= sys.sunrise %></td>
+                <td><%= sys.sunset %></td>
+                <td><%= timezone %></td>
+                <td><%= name %></td>
+
+                <% } %> <% } %>
+            </tr>
+        </table>
+
+        <p>
+            If interested, check out some of the more popular list of cities searched for
+            here: <a href="/weather"> Weather Search History</a>
+        </p>
+    </body>
+</html>

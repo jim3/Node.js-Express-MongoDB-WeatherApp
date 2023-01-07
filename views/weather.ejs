@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Open Weather</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    </head>
+    <body>
+        <nav>
+            <ul class="nav-container">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <h1 style="text-align: center">Weather</h1>
+
+        <h1>Weather Data :: Mongo Atlas</h1>
+      <% if (typeof weatherData !== "undefined") { %> 
+        <% weatherData.forEach(weather =>
+        { %>
+          <p><%= weather.name %></p>
+        <p><%= weather.timezone %></p>
+        <% }); %> 
+      <% } %>
+    </body>
+</html>
