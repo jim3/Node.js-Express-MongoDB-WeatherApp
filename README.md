@@ -1,8 +1,11 @@
-### A Weather Application using Node.js, Express, EJS and MongoDB Atlas
+### [OpenWeatherMap API](https://openweathermap.org/api) App
 
-Uses an HTML form in order to get the users zip code to displays their current weather stats.
+Takes input (zip code) and displays weather data via EJS templating and MongoDB Charts. The Current and 5 day forecasts are displayed according to the 
+users geographical location using OpenWeather's [Geocoding API](https://openweathermap.org/api/geocoding-api).
 
-MongoDB Atlas is used to extract the resulting weather data (variables) and writes writes the resulting weather data to a MongoDB database. 
-It also queries the MongoDB and prints the list of cites search for and prints that via Express `/weather` route.
-
-
+### Tech Stack
+- [Node.js](https://nodejs.org/en/) 
+- [Express](https://expressjs.com/) framework
+- [EJS](https://ejs.co/) templating
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cloud database
+- [MongoDB Charts](https://www.mongodb.com/products/charts) data visualization
