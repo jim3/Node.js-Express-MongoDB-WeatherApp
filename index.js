@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-const morgan = require('morgan');
+const morgan = require("morgan");
 const helpers = require("./helper");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan('tiny'));
+app.use(morgan("tiny"));
 
 require("dotenv").config();
 const apiKey = `${process.env.API_KEY}`;
@@ -81,7 +81,7 @@ app.post("/zip", async (req, res) => {
     }
 });
 
-// ------------------ MongoDB Atlas ------------------ //
+// mongodb atlas
 const uri = `mongodb+srv://${process.env.MONGO_DB_CONNECTION_STRING}`;
 const client = new MongoClient(uri, {
     useNewUrlParser: true,
