@@ -81,6 +81,16 @@ app.post("/zip", async (req, res) => {
     }
 });
 
+app.get("/weather", async (req, res) => {
+    const weatherDataCollection = client.db("openweatherapi").collection("weathers");
+    const weatherData = await weatherDataCollection.find().toArray();
+    res.render("weather", { weatherData: weatherData });
+});
+
+app.get("/about", (req, res) => {
+    res.render("about");
+});
+
 // mongodb atlas
 const uri = `mongodb+srv://${process.env.MONGO_DB_CONNECTION_STRING}`;
 const client = new MongoClient(uri, {
@@ -111,12 +121,6 @@ const mydb = async (coord, base, weather, main, wind, clouds, sys, timezone, nam
     }
 };
 mydb();
-
-app.get("/weather", async (req, res) => {
-    const weatherDataCollection = client.db("openweatherapi").collection("weathers");
-    const weatherData = await weatherDataCollection.find().toArray();
-    res.render("weather", { weatherData: weatherData });
-});
 
 // Error & exception handling
 app.use((err, req, res, next) => {
